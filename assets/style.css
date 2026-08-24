@@ -1,0 +1,12 @@
+
+#contact-iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+@media (max-width: 1280px) {
+    #contact-iframe {
+        height: 1080px; /* Taller height to fit stacked content on mobile */
+    }
+}

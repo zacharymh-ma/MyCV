@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Zachary, MA</title>
+    <style>
+        body {
+            /* background-color: #ffffff; */
+            /* background-color: #212529; */
+            background-color: transparent;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <template shadowrootmode="open">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+                /* 🌓 THEME SWITCH: Change --is-dark to 0 (Light) or 1 (Dark) */
+                .card-container {
+                    all: initial;
+                    --is-dark: 0;
+
+                    --text-primary: color-mix(in srgb, #f8f9fa calc(var(--is-dark) * 100%), #212529);
+                    --text-secondary: color-mix(in srgb, #ced4da calc(var(--is-dark) * 100%), #495057);
+                    --hover-bg: color-mix(in srgb, rgba(255, 255, 255, 0.12) calc(var(--is-dark) * 100%), rgba(0, 0, 0, 0.05));
+                    --icon-filter: invert(var(--is-dark));
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 42px;
+                    max-width: 988px;
+                    padding: 21px 0;
+                    margin: 0;
+                    font-family: 'JetBrains Mono', monospace;
+                    color: var(--text-primary);
+                    box-sizing: border-box;
+                }
+
+                .card-container *,
+                .card-container *::before,
+                .card-container *::after {
+                    box-sizing: border-box;
+                }
+
+                .card-avatar {
+                    flex-shrink: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .card-avatar img {
+                    width: 354px;
+                    height: 354px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    display: block;
+                }
+
+                .card-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 16px;
+                    flex: 1;
+                }
+
+                .card-name {
+                    margin: 0;
+                    font-size: 2.73rem;
+                    font-weight: 700;
+                    line-height: 1.15;
+                }
+
+                .card-name a {
+                    color: var(--text-primary);
+                    text-decoration: underline;
+                    text-underline-offset: 5px;
+                    transition: opacity 0.15s ease;
+                }
+
+                .card-name a:hover {
+                    opacity: 0.75;
+                }
+
+                .card-pitch {
+                    margin: 0;
+                    font-size: 1.07rem;
+                    line-height: 1.5;
+                    color: var(--text-secondary);
+                    opacity: 0.85;
+                }
+
+                .card-socials {
+                    display: flex;
+                    align-items: center;
+                    gap: 21px;
+                    margin-top: 6px;
+                }
+
+                .card-social-link {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 58px;
+                    height: 58px;
+                    border-radius: 13px;
+                    transition: transform 0.15s ease, background-color 0.15s ease;
+                    text-decoration: none;
+                }
+
+                .card-social-link:hover {
+                    transform: translateY(-3px);
+                    background-color: var(--hover-bg);
+                }
+
+                .card-social-link img {
+                    width: 42px;
+                    height: 42px;
+                    display: block;
+                }
+
+                .card-social-link img.theme-adaptive {
+                    filter: var(--icon-filter);
+                }
+
+                @media (max-width: 750px) {
+                    .card-container {
+                        flex-direction: column;
+                        text-align: center;
+                        gap: 26px;
+                        padding: 26px;
+                    }
+
+                    .card-socials {
+                        justify-content: center;
+                    }
+                }
+            </style>
+
+            <div class="card-container">
+                <div class="card-avatar">
+                    <img src="images/zach-avatar-rounded.png" alt="Zachary Avatar">
+                </div>
+                <div class="card-content">
+                    <h2 class="card-name">
+                        <a href="#">Zachary M H, MA</a>
+                    </h2>
+                    <p class="card-pitch">
+                        Technologist, developer, and hardcore backpacker. From early days in VBA to deep dives into
+                        Linux, modern code, and AI,
+                        I build and learn constantly. Fluent in 3 human languages and far more machine ones. Highly
+                        adaptable, globally
+                        traveled, and always exploring the next frontier.
+                    </p>
+                    <div class="card-socials">
+                        <!-- Email -->
+                        <a href="mailto:zachary_ma@hotmail.com" class="card-social-link" title="Email"
+                            aria-label="Email">
+                            <img src="images/email-dark.svg" alt="Email" width="42" height="42" class="theme-adaptive">
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/zacharymhma" target="_blank" rel="noopener noreferrer"
+                            class="card-social-link" title="LinkedIn" aria-label="LinkedIn">
+                            <img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=64" alt="LinkedIn">
+                        </a>
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/zacharymh-ma" target="_blank" rel="noopener noreferrer"
+                            class="card-social-link" title="GitHub" aria-label="GitHub">
+                            <img src="images/github-dark.svg" alt="GitHub" class="theme-adaptive">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </section>
+</body>
+
+</html>
